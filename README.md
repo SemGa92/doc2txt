@@ -1,6 +1,9 @@
 # doc2txt
-Converter of generic document format to txt.\
-Behind the scenes, doc2txt uses Libreoffice and Tesseract to manage input formats and - for this reason - it supports all formats accepted by the two softwares.
+DOC2TXT is a converter of generic document format to txt.\
+Behind the scenes, DOC2TXT uses [LibreOffice](https://www.libreoffice.org/)
+and [Tesseract](https://tesseract-ocr.github.io/) to manage input formats
+and - for this reason - it supports the formats accepted by the two softwares.\
+You can currently load: pdf, doc, docx, odt, rtf, jpg, png.
 
 ## How to use it
 Clone this repo and then run
