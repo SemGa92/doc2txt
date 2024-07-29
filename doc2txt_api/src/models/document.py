@@ -21,8 +21,8 @@ from utils.exceptions import LibreOfficeConversion
 
 class Document(BaseModel):
     root_path: ClassVar[str] = '/tmp/doc2txt'
-    supported_exts_doc: ClassVar[tuple[str]] = ('.pdf', '.doc', '.docx')
-    supported_exts_img: ClassVar[tuple[str]] = ('.jpg',)
+    supported_exts_doc: ClassVar[tuple[str]] = ('.pdf', '.doc', '.docx', '.odt', '.rtf')
+    supported_exts_img: ClassVar[tuple[str]] = ('.jpg', '.png')
 
     id: UUID = Field(default_factory=uuid4, frozen=True)
     f_name: str = Field(min_length=3, pattern=r"[^\\]*\.\w+$", frozen=False)
