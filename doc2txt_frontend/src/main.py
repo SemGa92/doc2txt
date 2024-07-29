@@ -22,20 +22,14 @@ with st.sidebar:
     st.header("About")
     st.markdown(
         """
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        Donec cursus leo orci, vitae ultricies diam interdum ut. Nulla facilisi.
-        Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.
-        Praesent ac molestie turpis, at placerat ligula. Sed at arcu accumsan, ullamcorper magna vel, maximus arcu. Duis eget venenatis odio.
-        Suspendisse eu lectus a magna sodales congue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
-        Suspendisse tempor nisi ipsum, in hendrerit urna condimentum sed.
-        Pellentesque luctus blandit interdum. Aliquam bibendum nisi sit amet diam congue semper.
-        Donec at lacus eget est vulputate gravida. Nunc ac aliquet odio, eu finibus dolor.
-        Maecenas tincidunt lectus urna, non faucibus risus tempor id.
+        DOC2TXT is a converter of generic document format to txt.\n
+        Behind the scenes, DOC2TXT uses Libreoffice and Tesseract to manage input formats and - for this reason - it supports the formats accepted by the two softwares.\n
+        You can currently load: pdf, doc, docx, odt, rtf, jpg, png.
         """
     )
 
-st.title("Document To TXT Converter")
-st.info("I accept all formats supported by Libreoffice or Tesseract")
+st.title("Generic document To TXT Converter")
+st.info("Hi :smile: Need some help converting a document to text? :rocket:")
 
 
 
