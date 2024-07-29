@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  doc2txt_api:
+    build:
+      context: ./doc2txt_api
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./doc2txt_api/src:/app
+
+  doc2txt_frontend:
+    build:
+      context: ./doc2txt_frontend
+    env_file:
+      - .env
+    depends_on:
+      - doc2txt_api
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./doc2txt_frontend/src:/app
