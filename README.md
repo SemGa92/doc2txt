@@ -7,7 +7,8 @@ Clone this repo and then run
 ```bash
 cd doc2txt
 docker compose up --build
-# or docker-compose up --build
+# or
+# docker-compose up --build
 # depending on your local compose configuration.
 ```
 Browse to http://localhost:8501 to use the web app.
