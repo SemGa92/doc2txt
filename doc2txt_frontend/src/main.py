@@ -23,7 +23,9 @@ with st.sidebar:
     st.markdown(
         """
         DOC2TXT is a converter of generic document format to txt.\n
-        Behind the scenes, DOC2TXT uses Libreoffice and Tesseract to manage input formats and - for this reason - it supports the formats accepted by the two softwares.\n
+        Behind the scenes, DOC2TXT uses [LibreOffice](https://www.libreoffice.org/)
+        and [Tesseract](https://tesseract-ocr.github.io/) to manage input formats
+        and - for this reason - it supports the formats accepted by the two softwares.\n
         You can currently load: pdf, doc, docx, odt, rtf, jpg, png.
         """
     )
