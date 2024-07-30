@@ -17,7 +17,6 @@ def get_token():
     return jwt.encode(to_encode, os.getenv('JWT_KEY'), algorithm='HS512')
 
 
-
 with st.sidebar:
     st.header("About")
     st.markdown(
@@ -33,8 +32,6 @@ with st.sidebar:
 st.title("Generic document To TXT Converter")
 st.info("Hi :smile: Need some help converting a document to text? :rocket:")
 
-
-
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     if st.button('Send file'):
@@ -49,7 +46,18 @@ if uploaded_file is not None:
             "content": base64.b64encode(uploaded_file.getvalue()).decode("utf-8")
             }
         response = requests.post(DOC2TXT_URL, data=json.dumps(payload), headers=headers, verify=False)
+
         try:
             st.text(response.json()['text'])
         except KeyError:
-            st.text(response.json()['error'])
+            error = response.json()['error']
+
+            if response.status_code == 400 and 'LibreOffice' in error:
+                time.sleep(2)
+                response = requests.post(DOC2TXT_URL, data=json.dumps(payload), headers=headers, verify=False)
+                try:
+                    st.text(response.json()['text'])
+                except KeyError:
+                    st.text(response.json()['error'])
+            else:
+                st.text(error)
