@@ -24,3 +24,5 @@ docker compose up doc2txt_api --build
 # docker-compose up doc2txt_api --build
 # depending on your local compose configuration.
 ```
+Refer to the [request](https://github.com/SemGa92/doc2txt/blob/main/tests/request.py) file to make your first request.\
+Make sure to edit f_name variable - line 30 - with the full path of your document.
